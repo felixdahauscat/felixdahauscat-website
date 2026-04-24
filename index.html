@@ -368,18 +368,19 @@
     }
 
     /* COLLECTIONS */
-    .section-collections {
-      background: var(--deep-mocha);
+    .section-Collections {
+      background: #1F1714;
       padding: 120px 52px;
       position: relative; overflow: hidden;
+      color: var(--cream);
     }
-    .section-collections::before {
+    .section-Collections::before {
       content: 'Collections';
       position: absolute; right: -20px; top: 50%;
       transform: translateY(-50%) rotate(90deg);
       font-family: 'Cormorant Garamond', serif;
       font-size: 9rem; font-weight: 300; font-style: italic;
-      color: rgba(255,255,255,0.03);
+      color: rgba(255,255,255,0.05);
       pointer-events: none; white-space: nowrap;
     }
     .pkg-label {
@@ -393,25 +394,25 @@
     .pkg-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(2rem, 3.5vw, 3.5rem); font-weight: 300;
-      color: var(--deep-mocha); margin-bottom: 60px; line-height: 1.2;
+      color: var(--cream); margin-bottom: 60px; line-height: 1.2;
     }
-    .pkg-title em { font-style: italic; color: var(--blush); }
+    .pkg-title em { font-style: italic; color: var(--gold-light); }
     .pkg-grid {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
     }
     .pkg-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
       padding: 52px 36px;
       transition: all 0.4s; position: relative;
       overflow: hidden;
     }
     .pkg-card:hover {
-      background: rgba(201,169,154,0.1);
+      background: rgba(255,255,255,0.08);
       border-color: var(--blush);
     }
     .pkg-card.featured {
-      background: rgba(201,169,154,0.12);
+      background: rgba(196,169,109,0.14);
       border-color: var(--gold);
     }
     .pkg-card.featured::before {
@@ -424,23 +425,23 @@
     .pkg-name {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.5rem; font-weight: 400; font-style: italic;
-      color: var(--deep-mocha); margin-bottom: 8px;
+      color: var(--cream); margin-bottom: 8px;
     }
     .pkg-price {
       font-size: 0.65rem; letter-spacing: 0.18em;
-      color: var(--gold); text-transform: uppercase; font-weight: 300;
+      color: var(--gold-light); text-transform: uppercase; font-weight: 300;
       margin-bottom: 30px;
     }
     .pkg-divider {
-      height: 1px; background: rgba(255,255,255,0.1); margin-bottom: 30px;
+      height: 1px; background: rgba(255,255,255,0.15); margin-bottom: 30px;
     }
     .pkg-features {
       list-style: none;
     }
     .pkg-features li {
       font-size: 0.75rem; font-weight: 200; letter-spacing: 0.06em;
-      color: var(--deep-mocha); padding: 8px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+      color: var(--cream); padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
       display: flex; align-items: center; gap: 12px;
     }
     .pkg-features li::before {
