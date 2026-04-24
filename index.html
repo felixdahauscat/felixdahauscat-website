@@ -987,14 +987,18 @@
         Fill in the form below and I'll be in touch within 24 hours to discuss 
         your vision and availability. All inquiries are completely confidential.
       </p>
-      <div class="contact-form">
+      <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden>
+          <label>Don't fill this out: <input name="bot-field" /></label>
+        </p>
         <div class="form-row">
-          <input type="text" class="form-input" placeholder="Your Name" />
-          <input type="email" class="form-input" placeholder="Email Address" />
+          <input type="text" name="name" class="form-input" placeholder="Your Name" required />
+          <input type="email" name="email" class="form-input" placeholder="Email Address" required />
         </div>
         <div class="form-row">
-          <input type="tel" class="form-input" placeholder="Phone (optional)" />
-          <select class="form-input">
+          <input type="tel" name="phone" class="form-input" placeholder="Phone (optional)" />
+          <select name="city" class="form-input">
             <option value="" disabled selected>Your City</option>
             <option>Sydney, NSW</option>
             <option>Melbourne, VIC</option>
@@ -1004,20 +1008,20 @@
             <option>Other / Regional</option>
           </select>
         </div>
-        <select class="form-input">
+        <select name="session-type" class="form-input">
           <option value="" disabled selected>Session Type of Interest</option>
           <option>The Intimate — $1,000</option>
           <option>The Signature — $1,400</option>
           <option>The Collection — $1,800</option>
           <option>Not sure yet — let's chat!</option>
         </select>
-        <textarea class="form-input" placeholder="Tell me a little about what you're hoping for from your session…"></textarea>
-        <button class="form-submit" type="button">Send My Enquiry ◆</button>
-      </div>
+        <textarea name="message" class="form-input" placeholder="Tell me a little about what you're hoping for from your session…"></textarea>
+        <button class="form-submit" type="submit">Send My Enquiry ◆</button>
+      </form>
       <div class="contact-info">
         <div class="info-item">
           <div class="info-label">Email</div>
-          <div class="info-value">hello@felixdahauscat.com.au</div>
+          <div class="info-value">andrew@felixdahauscat.com</div>
         </div>
         <div class="info-item">
           <div class="info-label">Based In</div>
