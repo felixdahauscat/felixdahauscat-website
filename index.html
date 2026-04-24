@@ -517,18 +517,25 @@
       min-height: 80vh;
     }
     .about-img {
-      background: linear-gradient(145deg, #b09888 0%, #7a5548 100%);
       position: relative; overflow: hidden;
     }
     .about-img-inner {
       width: 100%; height: 100%;
-      display: flex; align-items: center; justify-content: center;
+      position: relative;
     }
-    .about-img-circle {
-      width: 260px; height: 340px;
-      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
+    .about-img-inner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(42,31,26,0.35) 0%, rgba(42,31,26,0.05) 60%, transparent 100%);
+      pointer-events: none;
+    }
+    .about-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
     }
     .about-img-text {
       position: absolute; bottom: 40px; left: 40px;
@@ -933,7 +940,7 @@
   <section class="section-about" id="about">
     <div class="about-img">
       <div class="about-img-inner">
-        <div class="about-img-circle"></div>
+        <img class="about-photo" src="assets/images/about-felix.jpg" alt="Felix in a studio portrait" loading="lazy" />
       </div>
       <div class="about-img-text">felix</div>
     </div>
