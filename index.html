@@ -697,11 +697,13 @@
     /* RESPONSIVE */
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; }
-      .hero-right { height: 50vw; min-height: 300px; }
+      .hero-right { height: auto; min-height: 0; aspect-ratio: 5464 / 6830; }
+      .hero-image-placeholder { background-size: contain; background-position: center; }
       .hero-left { padding: 120px 32px 60px; }
       nav { padding: 24px 32px; }
       .section-philosophy, .section-about { grid-template-columns: 1fr; }
-      .phil-right { min-height: 400px; }
+      .phil-right { min-height: 0; aspect-ratio: 2 / 1; }
+      .phil-img-top { background-size: contain; background-position: center; }
       .about-img { min-height: 300px; }
       .about-content { padding: 60px 32px; }
       .phil-left { padding: 80px 32px; }
