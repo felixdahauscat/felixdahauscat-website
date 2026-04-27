@@ -620,6 +620,31 @@
     .form-input:focus { border-color: var(--blush); }
     textarea.form-input { resize: none; min-height: 120px; }
     select.form-input option { background: var(--deep-mocha); }
+    .form-checkbox {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 0.7rem; letter-spacing: 0.1em;
+      color: rgba(245,240,232,0.75); font-weight: 300;
+      cursor: none; padding: 4px 2px;
+    }
+    .form-checkbox input[type="checkbox"] {
+      appearance: none; -webkit-appearance: none;
+      width: 18px; height: 18px; flex-shrink: 0;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.25);
+      cursor: none; position: relative;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .form-checkbox input[type="checkbox"]:checked {
+      background: var(--blush); border-color: var(--blush);
+    }
+    .form-checkbox input[type="checkbox"]:checked::after {
+      content: ''; position: absolute;
+      left: 5px; top: 1px;
+      width: 5px; height: 10px;
+      border: solid var(--deep-mocha);
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
     .form-submit {
       background: var(--dusty-rose); color: var(--cream);
       border: none; padding: 18px 52px;
@@ -1022,6 +1047,10 @@
           <option>Not sure yet — let's chat!</option>
         </select>
         <textarea name="message" class="form-input" placeholder="Tell me a little about what you're hoping for from your session…"></textarea>
+        <label class="form-checkbox">
+          <input type="checkbox" name="newsletter" value="yes" />
+          <span>Subscribe to our newsletter</span>
+        </label>
         <button class="form-submit" type="submit">Send My Enquiry ◆</button>
       </form>
       <div class="contact-info">
